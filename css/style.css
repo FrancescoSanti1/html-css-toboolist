@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Urbanist', sans-serif;
+}
+
+body {
+    background-color: rgb(236, 236, 236);
+}
+
+header {
+    background-color: white;
+}
+
+#logo {
+    height: 50px;
+}
+
+#titolo-pagina {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#contenitore {
+    width: 70%;
+    margin: 30px auto 10px;
+}
+
+main, section {
+    background-color: white;
+    border-radius: 5px;
+}
+
+main {
+    margin-top: 3px;
+}
