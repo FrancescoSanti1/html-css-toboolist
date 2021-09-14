@@ -11,29 +11,82 @@ body {
     background-color: rgb(236, 236, 236);
 }
 
+/* CSS relativo all'header */
+
 header {
     background-color: white;
+    padding: 10px 20px;
 }
 
 #logo {
     height: 50px;
+    line-height: 70px;
+    vertical-align: middle;
 }
 
 #titolo-pagina {
     font-size: 30px;
     font-weight: 600;
+    /* line-height: 50px;
+    vertical-align: middle; */
 }
+
+/* CSS relativo al contenitore e alle sue parti */
 
 #contenitore {
     width: 70%;
     margin: 30px auto 10px;
 }
 
-main, section {
+main, #sezione-pulsanti {
     background-color: white;
     border-radius: 5px;
+    padding-left: 40px;
+}
+
+#sezione-pulsanti {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.pulsante {
+    padding: 5px 3px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+#pulsante-blu {
+    background-color: rgb(26, 147, 187);
+    color: white;
+    border: solid 2px rgb(26, 147, 187);
+}
+
+#pulsante-bianco {
+    background-color: white;
+    color: grey;
+    border: solid 2px grey;
 }
 
 main {
     margin-top: 3px;
+}
+
+.titolo-sezione {
+    font-weight: 600;
+}
+
+.task {
+    font-size: 20px;
+}
+
+.titolo-sezione::before {
+    content: "\25BC  ";
+}
+
+.fatto .task-descrizione::before {
+    content: "\2714  ";
+}
+
+.da-fare .task-descrizione::before {
+    content: "\2718  ";
 }
