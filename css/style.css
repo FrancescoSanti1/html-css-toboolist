@@ -78,21 +78,33 @@ main {
     padding-bottom: 20px;
 }
 
+.titolo-sezione::before {
+    content: "\25BC  ";
+}
+
 .task {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.titolo-sezione::before {
-    content: "\25BC  ";
+.task-descrizione {
+    margin-left: 5px;
 }
 
 .fatto .task-descrizione::before {
-    content: "\2714  ";
+    content: "\2714";
+    color: green;
+    border: solid 1px green;
+    border-radius: 50%;
+    padding: 2px 4px;
 }
 
 .da-fare .task-descrizione::before {
-    content: "\2718  ";
+    content: "\2718";
+    color: red;
+    border: solid 1px red;
+    border-radius: 50%;
+    padding: 2px 4px;
 }
 
 /* Questa parte assegna i bollini degli argomenti ai singoli task */
