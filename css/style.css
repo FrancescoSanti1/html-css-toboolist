@@ -20,15 +20,13 @@ header {
 
 #logo {
     height: 50px;
-    line-height: 70px;
+    line-height: 50px;
     vertical-align: middle;
 }
 
 #titolo-pagina {
     font-size: 30px;
     font-weight: 600;
-    /* line-height: 50px;
-    vertical-align: middle; */
 }
 
 /* CSS relativo al contenitore e alle sue parti */
@@ -43,6 +41,8 @@ main, #sezione-pulsanti {
     border-radius: 5px;
     padding-left: 40px;
 }
+
+/* CSS relativo alla sezione dei due pulsanti */
 
 #sezione-pulsanti {
     padding-top: 10px;
@@ -63,20 +63,24 @@ main, #sezione-pulsanti {
 
 #pulsante-bianco {
     background-color: white;
-    color: grey;
-    border: solid 2px grey;
+    color: lightgrey;
+    border: solid 2px lightgrey;
 }
+
+/* CSS relativo al main che contiene tutte le task */
 
 main {
     margin-top: 3px;
+    padding-top: 40px;
 }
 
-.titolo-sezione {
-    font-weight: 600;
+.sezione-task {
+    padding-bottom: 20px;
 }
 
 .task {
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .titolo-sezione::before {
@@ -89,4 +93,39 @@ main {
 
 .da-fare .task-descrizione::before {
     content: "\2718  ";
+}
+
+/* Questa parte assegna i bollini degli argomenti ai singoli task */
+
+.argomento {
+    font-size: 14px;
+    color: white;
+}
+
+.editorial::after {
+    content: "Editorial";
+    background-color: rgb(14, 162, 221);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.goals::after {
+    content: "Q1 Goals";
+    background-color: rgb(156, 41, 179);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.recruiting::after {
+    content: "Recruiting";
+    background-color: rgb(41, 179, 94);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.website::after {
+    content: "Website";
+    background-color: rgb(196, 103, 154);
+    border-radius: 10px;
+    padding: 5px 10px;
 }
