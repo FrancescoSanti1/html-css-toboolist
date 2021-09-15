@@ -20,13 +20,13 @@ header {
 
 #logo {
     height: 50px;
-    line-height: 50px;
     vertical-align: middle;
 }
 
 #titolo-pagina {
     font-size: 30px;
     font-weight: 600;
+    vertical-align: middle;
 }
 
 /* CSS relativo al contenitore e alle sue parti */
@@ -53,6 +53,7 @@ main, #sezione-pulsanti {
     padding: 5px 3px;
     border-radius: 3px;
     display: inline-block;
+    text-decoration: none;
 }
 
 #pulsante-blu {
@@ -79,7 +80,8 @@ main {
 }
 
 .titolo-sezione::before {
-    content: "\25BC  ";
+    content: "\25BC";
+    margin-right: 10px;
 }
 
 .task {
@@ -87,57 +89,59 @@ main {
     margin-bottom: 10px;
 }
 
-.task-descrizione {
-    margin-left: 5px;
+/* Questa parte è relativa alle spunte "fatto" e "da fare" */
+
+.task-circle::before {
+    display: inline-block;
+    font-size: 20px;
+    height: 22px;
+    width: 20px;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 50%;
+    padding: 4px;
+    margin-right: 10px;
 }
 
-.fatto .task-descrizione::before {
+.task-circle.check::before {
     content: "\2714";
     color: green;
     border: solid 1px green;
-    border-radius: 50%;
-    padding: 2px 4px;
 }
 
-.da-fare .task-descrizione::before {
+.task-circle.cross::before {
     content: "\2718";
     color: red;
     border: solid 1px red;
-    border-radius: 50%;
-    padding: 2px 4px;
 }
+
 
 /* Questa parte assegna i bollini degli argomenti ai singoli task */
 
-.argomento {
+.argomento::after {
     font-size: 14px;
     color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-left: 20px;
 }
 
-.editorial::after {
+.argomento.editorial::after {
     content: "Editorial";
     background-color: rgb(14, 162, 221);
-    border-radius: 10px;
-    padding: 5px 10px;
 }
 
-.goals::after {
+.argomento.goals::after {
     content: "Q1 Goals";
     background-color: rgb(156, 41, 179);
-    border-radius: 10px;
-    padding: 5px 10px;
 }
 
-.recruiting::after {
+.argomento.recruiting::after {
     content: "Recruiting";
     background-color: rgb(41, 179, 94);
-    border-radius: 10px;
-    padding: 5px 10px;
 }
 
-.website::after {
+.argomento.website::after {
     content: "Website";
     background-color: rgb(196, 103, 154);
-    border-radius: 10px;
-    padding: 5px 10px;
 }
